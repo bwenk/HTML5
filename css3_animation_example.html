@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS3 Animation Example</title>
+    <style>
+	  @keyframes bild1 {  
+        from { top: -160px; left: 10px; }
+        to { top: 120px; left: 10px; }
+      }
+      @-webkit-keyframes bild1 {  
+        from { top: -160px; left: 10px; }
+        to { top: 120px; left: 10px; }
+	  }
+
+	  @keyframes bild2 {  
+        from { top: 120px; left: -120px; }
+        to { top: 120px; left: 140px; }
+      }
+      @-webkit-keyframes bild2 {  
+        from { top: 120px; left: -120px; }
+        to { top: 120px; left: 140px; }
+      }
+
+	  @keyframes bild3 {  
+        from { top: 120px; left: -120px; }
+        to { top: 120px; left: 270px; }
+      }
+      @-webkit-keyframes bild3 {  
+        from { top: 120px; left: -120px; }
+        to { top: 120px; left: 270px; }
+      }
+
+	  @keyframes bild4 {  
+        from { top: -160px; left: 400px; }
+        to { top: 120px; left: 400px; }
+      }
+      @-webkit-keyframes bild4 {  
+        from { top: -160px; left: 400px; }
+        to { top: 120px; left: 400px; }
+      }
+      
+	  @keyframes bild5 {  
+        from { top: 40px; left: -120px; }
+        to { top: 120px; left: 530px; }
+      }
+      @-webkit-keyframes bild5 {  
+        from { top: 40px; left: -120px; }
+        to { top: 120px; left: 530px; }
+      }
+
+	  @keyframes bild6 {  
+        from { top: -160px; left: 40px; }
+        to { top: 120px; left: 660px; }
+      }
+      @-webkit-keyframes bild6 {  
+        from { top: -160px; left: 40px; }
+        to { top: 120px; left: 660px; }
+      }
+
+	  @keyframes bild7 {  
+        from { top: -160px; left: 790px; }
+        to { top: 120px; left: 790px; }
+      }
+      @-webkit-keyframes bild7 {  
+        from { top: -160px; left: 790px; }
+        to { top: 120px; left: 790px; }
+      }
+      
+	  .imgbox {
+	  	display: block;
+		position: fixed;
+	  }
+
+	  #img1 {
+		top: -160px; left: 10px;
+        /* Firefox, Opera, Internet Explorer 10 */
+        animation-name: bild1;  
+        animation-iteration-count: 1;  
+        animation-timing-function: ease-in;
+        animation-duration: 5s;
+		animation-fill-mode: both;
+        /* Chrome, Safari */
+        -webkit-animation-name: bild1;  
+        -webkit-animation-iteration-count: 1;  
+        -webkit-animation-timing-function: ease-in;
+        -webkit-animation-duration: 5s;
+		-webkit-animation-fill-mode: both;
+	  }
+	  #img2 {
+		top: 120px; left: -120px;
+        /* Firefox, Opera, Internet Explorer 10 */
+        animation-name: bild2;  
+        animation-iteration-count: 1;  
+        animation-timing-function: ease-in-out;
+        animation-delay: 2s;
+        animation-duration: 2s;
+		animation-fill-mode: both;
+        /* Chrome, Safari */
+        -webkit-animation-name: bild2;  
+        -webkit-animation-iteration-count: 1;  
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-delay: 2s;
+        -webkit-animation-duration: 2s;
+		-webkit-animation-fill-mode: both;
+	  }
+	  #img3 {
+		top: 120px; left: -120px;
+        /* Firefox, Opera, Internet Explorer 10 */
+        animation-name: bild3;  
+        animation-iteration-count: 1;  
+        animation-timing-function: ease-in-out;
+        animation-delay: 4s;
+        animation-duration: 3s;
+		animation-fill-mode: both;
+        /* Chrome, Safari */
+        -webkit-animation-name: bild3;  
+        -webkit-animation-iteration-count: 1;  
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-delay: 4s;
+        -webkit-animation-duration: 3s;
+		-webkit-animation-fill-mode: both;
+	  }
+	  #img4 {
+        top: -160px; left: 400px; 
+        /* Firefox, Opera, Internet Explorer 10 */
+        animation-name: bild4;  
+        animation-iteration-count: 1;  
+        animation-timing-function: ease-in-out;
+        animation-delay: 2s;
+        animation-duration: 6s;
+		animation-fill-mode: both;
+        /* Chrome, Safari */
+        -webkit-animation-name: bild4;  
+        -webkit-animation-iteration-count: 1;  
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-delay: 2s;
+        -webkit-animation-duration: 6s;
+		-webkit-animation-fill-mode: both;
+	  }
+	  #img5 {
+        top: 40px; left: -120px;
+        /* Firefox, Opera, Internet Explorer 10 */
+        animation-name: bild5;  
+        animation-iteration-count: 1;  
+        animation-timing-function: ease-in-out;
+        animation-delay: 3s;
+        animation-duration: 3s;
+		animation-fill-mode: both;
+        /* Chrome, Safari */
+        -webkit-animation-name: bild5;  
+        -webkit-animation-iteration-count: 1;  
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-delay: 3s;
+        -webkit-animation-duration: 3s;
+		-webkit-animation-fill-mode: both;
+	  }
+	  #img6 {
+        top: -160px; left: 40px;
+        /* Firefox, Opera, Internet Explorer 10 */
+        animation-name: bild6;  
+        animation-iteration-count: 1;  
+        animation-timing-function: ease-in-out;
+        animation-delay: 4s;
+        animation-duration: 2s;
+		animation-fill-mode: both;
+        /* Chrome, Safari */
+        -webkit-animation-name: bild6;  
+        -webkit-animation-iteration-count: 1;  
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-delay: 4s;
+        -webkit-animation-duration: 2s;
+		-webkit-animation-fill-mode: both;
+	  }
+	  #img7 {
+		top: -160px; left: 790px;
+        /* Firefox, Opera, Internet Explorer 10 */
+        animation-name: bild7;  
+        animation-iteration-count: 1;  
+        animation-timing-function: linear;
+        animation-delay: 1s;
+        animation-duration: 6s;
+		animation-fill-mode: both;
+        /* Chrome, Safari */
+        -webkit-animation-name: bild7;  
+        -webkit-animation-iteration-count: 1;  
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-delay: 1s;
+        -webkit-animation-duration: 6s;
+		-webkit-animation-fill-mode: both;
+	  }
+	</style>
+  </head>
+  <body>
+    <img class="imgbox" id="img1" src="balestra.jpg"/>
+    <img class="imgbox" id="img2" src="callegari.jpg"/>
+    <img class="imgbox" id="img3" src="catrina.jpg"/>
+    <img class="imgbox" id="img4" src="fluor.jpg"/>
+    <img class="imgbox" id="img5" src="lechner.jpg"/>
+    <img class="imgbox" id="img6" src="mayer.jpg"/>
+    <img class="imgbox" id="img7" src="spiegel.jpg"/>
+  </body>
+</html>

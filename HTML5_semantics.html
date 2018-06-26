@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>HTML5 Semantische Elemente</title>
+    <link rel="stylesheet" type="text/css" href="HTML5_styles.css">
+    <style type="text/css">
+       nav {  
+         position: fixed; 
+         left: 360px;
+         top: 30px;
+         z-index: 2;
+         font-family: "Comic Sans MS", cursive, sans-serif;  
+         font-size: 10px;  
+         color: #111111; 
+         border:1px solid #000000;
+         padding:4px; 
+         background:#cccccc;
+         opacity:0.8;
+       }
+       aside {  
+         float:right; 
+         width: 120px;
+         font-family: "Comic Sans MS", cursive, sans-serif;  
+         font-size: 12px;  
+         color: #111111; 
+         margin-right: 10px;
+         border:1px solid #000000;
+         padding:4px; 
+         background:#ffffdd;
+       }
+    </style>
+  <body>
+    <nav>
+      <em><strong>Navigation</strong></em>: <a href="#oben">nach oben</a> &nbsp; &nbsp; <a href="#unten">nach unten</a>
+    </nav>
+    <a id="oben"></a>
+    <article>
+      <hgroup>
+        <h1>HTML5</h1>
+        <h2>Semantische Elemente</h2>
+      </hgroup>
+      <section id="Beschreibung">
+        <aside>
+          <em><strong>Seitlicher "Kasten"</strong></em>: Blöcke mit Zusatzinformation wie sie bei Zeitungen oder auch in Fachartikeln und Büchern vorkommen ...
+        </aside>
+        <div class="div_description">
+          <p>Die semantischen Elemente dienen zur Strukturierung der HTML5-Dokumente. Die einzelnen Textblöcke erhalten mit den semantischen Elementen inhaltliche Bedeutung. Das
+             ist für Suchmaschinen vorteilhaft, die ein HTML5-Dokument mit semantischen Elementen inhaltlich treffender indexieren können. Aber auch für Vorleseprogramme (screen readers) 
+             ist es mit den semantischen Elementen einfacher, den Inhalt von HTML5-Dokumenten sehbehinderten und blinden Menschen leichter zugänglich zu machen.
+		  </p>
+		  <p>Ausgewählte semantische Elemente:</p>
+          <ul>
+		    <li>article: umschliesst einen vom Rest der Seite unabhängigen, in sich geschlossenen Inhaltsblock</li>
+		    <li>aside: Zusatz- / Detail-Information als Ergänzung zu einem Inhaltsblock</li>
+		    <li>figure: umschliesst ein Bild / eine Grafik</li>
+		    <li>figcaption: bezeichnet eine Bildunterschrift</li>
+		    <li>footer: umschliesst eine "Fusszeile"</li>
+		    <li>header: umschliesst eine "Kopfzeile"</li>
+		    <li>nav: umschliesst Navigationselemente</li>
+		    <li>section: umschliesst einen Abschnitt (des Dokuments / eines Artikels)</li>
+		  </ul>
+	    </div>
+	  </section>
+      <h2>Die Syntax einiger ausgewählter semantischer Elemente</h2>
+      <section>
+        <div class="div_syntax">
+        <pre>&lt;nav&gt;
+  &lt;em&gt;&lt;strong&gt;Navigation&lt;/strong&gt;&lt;/em&gt;:&lt;a href="#oben"&gt;nach oben&lt;/a&gt; &lt;a href="#unten"&gt;nach unten&lt;/a&gt;
+&lt;/nav>
+
+&lt;aside&gt;
+  &lt;em&gt;&lt;strong&gt;Seitlicher "Kasten"&lt;/strong&gt;&lt;/em&gt;: Blöcke mit Zusatzinformation ...
+&lt;/aside></pre>
+        </div>
+      </section>
+
+    <h2>Weiterführende Links</h2>
+    <div class="div_links">
+        <p><a target="_blank" href="http://www.w3schools.com/html/html5_new_elements.asp">w3schools New Elements in HTML5</a></p>
+        <p><a target="_blank" href="http://diveintohtml5.info/semantics.html#new-elements">Dive Into HTML5 New Semantic Elements In HTML5</a></p>
+    </div>
+    <a id="unten"></a>
+  </body>
+</html>

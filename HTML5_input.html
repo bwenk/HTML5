@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>HTML5 Input</title>
+    <link rel="stylesheet" type="text/css" href="HTML5_styles.css">
+  </head>
+  <body>
+    <h1>HTML5</h1>
+    <h2>Input</h2>
+    <div class="div_description">
+      <p>
+	    Mit der Spezifikation neuer Attribute für das HTML5-Element &lt;input&gt; lassen sich
+		(theoretisch) Web-Formulare mit besserer Unterstützung der Nutzer/innen und vereinfachter Prüfung
+		der Eingaben gestalten.
+	  </p>
+	  <p>
+	    Leider ist die Implementation der neuen Attribute bei den meisten Browsern noch nicht weit fortgeschritten.
+		Vor allem sind die Implementationen sehr unterschiedlich, so dass der praktische Nutzen der neuen Attribute
+		momentan noch sehr beschränkt ist.
+	  </p>
+	</div>
+    <h2>Beispiele</h2>
+    <div class="div_syntax">
+	  <p>
+	    <label for="pw">"Versteckte" Eingabe von Zeichen: </label><input name="pw" type="password">
+	  </p>
+	  <p>
+	    <label for="bereich">Grobe Auswahl aus einem Zahlenbereich: </label><input name="bereich" type="range" min="-6" max="6" step="2">
+	  </p>
+	  <p>
+	    <label for="zahl">Exakte Auswahl aus einem Zahlenbereich: </label><input name="zahl" type="number" min="-6" max="6" step="2">
+	  </p>
+      <datalist id="telefonnummern">
+	    <option value="+41 81 286 39 97" label="Hauser Ulrich">
+	    <option value="+41 81 286 24 42" label="Hofstetter Rolf">		
+	  </datalist>
+	  <p>
+	    <label for="liste">Auswahl aus einer Liste: </label><input name="liste" type="tel" list="telefonnummern">
+	  </p>
+	  </div>
+    <h2>Weiterführende Links</h2>
+    <div class="div_links">
+        <p><a target="_blank" href="http://www.w3schools.com/tags/tag_input.asp">w3schools &lt;input&gt; tag</a></p>
+        <p><a target="_blank" href="http://www.html5rocks.com/de/tutorials/forms/html5forms/">Spektakuläre Formulare mit HTML5</a></p>
+    </div>
+  </body>
+</html>

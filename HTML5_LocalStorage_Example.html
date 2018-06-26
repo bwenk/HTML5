@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<!-- HTW Chur, B.Wenk, Version 2, 17. September 2012 -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lokale Speicherung von Daten</title> 
+  </head>
+  <body>
+    <h1>Diese Webseite erinnert sich an Sie ...</h1>
+    <script type="text/javascript">  // ### Anzahl Aufrufe anzeigen ###
+      if (localStorage.pagecount) {  // existiert bereits ein Eintrag im lokalen Speicher?
+        localStorage.pagecount = Number(localStorage.pagecount) + 1;  // ja: Anzahl Aufrufe um 1 erhöhen
+        document.write("<p>Sie haben diese Seite auf diesem Rechner schon " + localStorage.pagecount + " Mal aufgerufen.</p>");
+      }
+      else {
+        document.write("<p>Sie rufen diese Seite auf diesem Rechner zum ersten Mal auf.</p>");
+        localStorage.pagecount = 1;  // nein: Anzahl Aufrufe auf 1 setzen
+      }
+    </script>
+  </body>
+</html>

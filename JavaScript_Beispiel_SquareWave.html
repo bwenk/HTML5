@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8">
+	    <title>Fourier Synthese eines Rechtecksignals</title>
+
+    </head>
+    <body onload="addSineWave();">
+        <h2>Rechtecksignal = Summe ausgewählter Sinussignale</h2>
+        <div>
+        <math xmlns="http://www.w3.org/1998/Math/MathML" style="font-family:Courier New; font-size:18px;">
+ <semantics>
+  <mrow>
+   <mi>y</mi>
+   <mrow>
+    <mrow>
+     <mo stretchy="false">(</mo>
+     <mrow>
+      <mi>x</mi>
+     </mrow>
+     <mo stretchy="false">)</mo>
+    </mrow>
+    <mo stretchy="false">=</mo>
+    <mi>sin</mi>
+   </mrow>
+   <mrow>
+    <mrow>
+     <mo stretchy="false">(</mo>
+     <mrow>
+      <mi>x</mi>
+     </mrow>
+     <mo stretchy="false">)</mo>
+    </mrow>
+    <mo stretchy="false">+</mo>
+    <mfrac>
+     <mrow>
+      <mn>1</mn>
+     </mrow>
+     <mrow>
+      <mn>3</mn>
+     </mrow>
+    </mfrac>
+   </mrow>
+   <mi>sin</mi>
+   <mrow>
+    <mrow>
+     <mo stretchy="false">(</mo>
+     <mrow>
+      <mn>3x</mn>
+     </mrow>
+     <mo stretchy="false">)</mo>
+    </mrow>
+    <mo stretchy="false">+</mo>
+    <mfrac>
+     <mrow>
+      <mn>1</mn>
+     </mrow>
+     <mrow>
+      <mn>5</mn>
+     </mrow>
+    </mfrac>
+   </mrow>
+   <mi>sin</mi>
+   <mrow>
+    <mrow>
+     <mo stretchy="false">(</mo>
+     <mrow>
+      <mn>5x</mn>
+     </mrow>
+     <mo stretchy="false">)</mo>
+    </mrow>
+    <mo stretchy="false">+</mo>
+    <mfrac>
+     <mrow>
+      <mn>1</mn>
+     </mrow>
+     <mrow>
+      <mn>7</mn>
+     </mrow>
+    </mfrac>
+   </mrow>
+   <mi>sin</mi>
+   <mrow>
+    <mrow>
+     <mo stretchy="false">(</mo>
+     <mrow>
+      <mn>7x</mn>
+     </mrow>
+     <mo stretchy="false">)</mo>
+    </mrow>
+    <mo stretchy="false">+</mo>
+    <mn>...</mn>
+   </mrow>
+  </mrow>
+  <annotation encoding="StarMath 5.0">y(x) = sin(x) + {1} over {3} sin(3x) + {1} over {5} sin(5x) + {1} over {7} sin(7x) + ...</annotation>
+ </semantics>
+</math>
+   </div>
+        <div><canvas id="leinwand" width="900" height="400"></canvas></div>
+                <script type="text/javascript">
+            var step = 1;
+			var increment = Math.PI / 90;
+			var maxAngle = 8 * Math.PI;
+			var angle;
+			var x;
+			var y;
+			var int;
+            function addSineWave() {
+               var c = document.getElementById("leinwand");
+               var context = c.getContext("2d");
+               angle = 0;
+               x = 0;
+			   context.moveTo (0, 200);
+               while (angle < maxAngle) {
+                   y = 200;
+                   for (var i=1; i <= step; i=i+2) {
+                     y = y - 100/i * Math.sin(i*angle);
+                   }
+			       context.lineTo(x,y);
+				   context.stroke();
+			       x = x + 1;
+				   angle = angle + increment;
+			   }
+			   step = step + 2;
+		    }
+        </script>
+        <div><button onclick="addSineWave()">nächstes Glied der Summe addieren</button></div>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8">
+	    <title>Fourier Synthese eines Rechtecksignals</title>
+	    <script type="text/javascript">
+            var index = 1;
+			var maxAngle = 8 * Math.PI;    // 4 Perioden
+			var increment = Math.PI / 90;  // 4 Perioden entsprechen 720 pixel auf der x-Achse
+			var angle;
+			var x;
+			var y;
+            function setParameter() {  // Anzahl Glieder der Summe in grössten Index umrechnen
+               p = document.getElementById("userInput");  // Zeiger auf eingegebene Anzahl Glieder
+               index = p.value * 2 - 1;  // nur Glieder mit ungeradem Index berücksichtigen 
+		    }
+            function addSineWaves() {  // Sinussignale addieren und resultierendes Signal grafisch darstellen
+               var c = document.getElementById("leinwand");  // Zeiger auf Canvas
+               var context = c.getContext("2d");  // wir zeichnen nur 2D
+               angle = 0;  // Winkel in Radiant
+               x = 0;  // x-Koordinate
+			   context.moveTo (0, 200);  // Zeichenstift bei Position x=0, y=200 ansetzen
+               while (angle < maxAngle) {  // mehrere Perioden darstellen
+                   y = 200;  // x-Achse an Position y=200
+                   for (var i=1; i <= index; i=i+2) {  // Anzahl gewünschter Glieder addieren
+                     y = y - 100/i * Math.sin(i*angle);
+                   }
+			       context.lineTo(x,y);  // Linie zum nächsten Punkt der resultierenden Signalkurve zeichnen
+				   context.stroke();
+			       x = x + 1;  // x-Koordinate des nächsten Punkts des Signals
+				   angle = angle + increment;  // nächster Winkel
+			   }
+		    }
+        </script>
+    </head>
+    <body onload="addSineWaves();">
+        <h2>Rechtecksignal = Summe ausgewählter Sinussignale</h2>
+        <p>y(x) = sin(x) + 1/3*sin(3x) + 1/5*sin(5x) + 1/7*sin(7x) + ...</p>
+        <div><canvas id="leinwand" width="900" height="400"></canvas></div>
+        <div>Anzahl Glieder:<input id="userInput" type="number"/> <button onclick="setParameter(); addSineWaves()">Signalform anzeigen</button></div>
+    </body>
+</html>

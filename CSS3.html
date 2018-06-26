@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>CSS3</title>
+    <link rel="stylesheet" type="text/css" href="HTML5_styles.css">
+    <style>
+	  /* Firefox, Opera, Internet Explorer 10 */
+	  @keyframes blinker {  
+        from { opacity: 1.0; } to { opacity: 0.0; }
+      }
+      /* Chrome, Safari */
+      @-webkit-keyframes blinker {  
+        from { opacity: 1.0; } to { opacity: 0.0; }
+      }
+      .css3-blink {
+        /* Firefox, Opera, Internet Explorer 10 */
+        animation-name: blinker;  
+        animation-iteration-count: infinite;  
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+        /* Chrome, Safari */
+        -webkit-animation-name: blinker;  
+        -webkit-animation-iteration-count: infinite;  
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-duration: 1s; 
+      }
+	</style>
+  </head>
+  <body>
+    <h1>CSS3</h1>
+    <h2>Cascading Style Sheets Version 3</h2>
+    <div class="div_description">
+      <p>
+	     Mit CSS3 lassen sich Regeln zur Formgebung der Inhalte von Webseiten formulieren, die weit über
+	     die Möglichkeiten der bisherigen Cascading Style Sheets hinausgehen. Es sind deshalb an dieser
+		 Stelle auch lange nicht alle Neuerungen aufgezählt. Ein Blick in die Spezifikationen von CSS3 und
+		 in passende Quellen im Web oder in anregende Bücher lohnt sich auf jeden Fall.
+	  </p>
+      <p>
+	     Nebst runden "Ecken", Schatten, graduellen Farbübergängen, usw.
+		 bieten die Regeln für <i>Transformationen</i> und <i>Animationen</i> ganz spezielle 
+		 Gestaltungsmöglichkeiten. Mit Transformationen können HTML-Elemente verschoben, gedreht und skaliert werden.
+         Animierte HTML-Elemente können sich auf dem Bildschirm bewegen, die Farbe oder Grösse ändern, erscheinen und
+         "entschwinden".		 
+	  </p>
+	  <p>
+	     Die aktuellen Versionen der verschiedenen Browser unterstützen CSS3 weitgehend. Allerdings müssen die Regeln 
+		 für Mozilla-basierte Browser mit dem Prefix "moz-" und für Webkit-basierte Browser mit  dem Prefix"webkit-" 
+		 formuliert werden.
+	  </p>
+    </div>
+    <h2>Beispiel</h2>
+    <div class="div_description">
+      <p class="css3-blink">Blinkender Hinweis - bitte beachten!</p>
+    </div>
+    <h2>Weiterführende Links</h2>
+    <div class="div_links">
+        <p><a target="_blank" href="http://www.w3schools.com/css/css3_intro.asp">w3schools CSS3</a></p>
+        <p><a target="_blank" href="http://css3generator.com">CSS3 Generator</a></p>
+    </div>
+  </body>
+</html>

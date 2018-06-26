@@ -1,0 +1,68 @@
+/* Styles für die HTML5 Elemente Seiten*/
+
+p {  
+  font-family: Calibri, Arial, Verdana, sans-serif;  
+  font-size: 14px;  
+  color: #333333;  
+  text-indent: 0px;   
+  position: relative;  
+  margin-right: 40px;
+}
+      
+.lightgrey {  
+  background-color: #eeeeee;
+  margin-left: 20px;
+  margin-right: 60px;
+  padding: 4px;
+}
+
+h1 {  
+  font-family: Verdana;  
+  font-size: 28px;  
+  color: #330099;
+}
+
+h2 {  
+  color: #330099;  
+  font-family: Verdana;  
+  font-size: 20px;
+}
+
+ul {  
+  font-family: Calibri, Arial, Verdana, sans-serif;  
+  font-size: 14px;  
+  color: #333333;
+}
+
+.div_description {  
+  position: relative;  
+  left: 20px;
+  border:1px solid #a1a1a1;
+  padding:10px; 
+  background:#ffffdd;
+  width:80%;
+  border-radius:8px;
+}
+
+.div_syntax {  
+  position: relative;  
+  left: 20px;
+  border:1px solid #a1a1a1;
+  padding:10px; 
+  background:#ffffdd;
+  width:80%;
+  border-radius:8px;
+}
+
+.div_links {  
+  position: relative;  
+  left: 20px;
+    border:1px solid #a1a1a1;
+  padding:10px; 
+  background:#ffffdd;
+  width:80%;
+  border-radius:8px;
+}
+
+
+

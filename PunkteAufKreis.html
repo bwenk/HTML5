@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+  
+    <h1>Koordinaten von 60 Punkten auf einem Kreis mit dem Radius 150</h1>
+    
+    <ul>
+      <script type="text/javascript">
+        var alphaMax = 2*Math.PI;
+        var alphaInterval = Math.PI/30;
+        var x = 0.0, y = 0.0;
+        for (var alpha=0.0; alpha<alphaMax;alpha=alpha+alphaInterval) {
+          x = 150*Math.cos(alpha)+300;
+          y = 150*Math.sin(alpha)+300; 
+          document.write("<li>"+x+", "+y+"</li>");
+        }
+      </script>
+    </ul>
+
+  </body>
+</html>

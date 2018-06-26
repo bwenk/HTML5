@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>Vergleich von Suchmaschinen</title>
+    <style type="text/css">
+      h1 {font-family: Verdana; font-size: 1em;}
+    </style>
+	<script type="text/javascript">
+	  function strokeThick (el) {
+        var arg = el;
+	    conn = document.getElementById(arg);            // Verbindung zweier gleicher Suchergebnisse
+	    conn.setAttribute("stroke-width", "6");         // Strichdicke vergrössern
+	    conn.setAttribute("stroke", "red");             // Strichfarbe ändern
+	  };
+	  function strokeThin (el) {
+        var arg = el;
+	    conn = document.getElementById(arg);            // Verbindung zweier gleicher Suchergebnisse
+	    conn.setAttribute("stroke-width", "1");         // ursprüngliche Strichdicke
+	    conn.setAttribute("stroke", "black");           // ursprüngliche Strichfarbe
+	  };
+	</script>
+  </head>
+  <body>
+<svg width="800" height="600" version="1.0"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Titelzeilen -->
+  <text style="font-family: Verdana; font-size: 20px;">
+    <tspan x="40" y="50">Die ersten 20 Treffer von Google, Bing und Yandex</tspan>
+    <tspan x="150" y="80">mit dem Suchbegriff "rangieren"</tspan>
+  </text>
+  <!-- connections between equal hits -->  
+  <path id="c1" d="M300,150 Q300,300 429.9038105676658,375" fill="none" stroke="black" stroke-width="1" />
+  <path id="c2" d="M361.0104964613698,162.9681813536098 Q300,300 421.3525491562421,388.167787843871" fill="none" stroke="black" stroke-width="1" />
+  <path id="c3" d="M331.1867536226638,153.27785988992912 Q300,300 400.3695909538287,411.47172382160915" fill="none" stroke="black" stroke-width="1" />
+  <path id="c4" d="M400.3695909538285,188.52827617839063 Q300,300 315.67926949014804,449.178284305241" fill="none" stroke="black" stroke-width="1" />
+  <path id="c5" d="M421.3525491562418,211.83221215612866 Q300,300 300,450" fill="none" stroke="black" stroke-width="1" />
+  <path id="c6" d="M429.9038105676656,225 Q300,300 253.64745084375795,442.6584774442731" fill="none" stroke="black" stroke-width="1" />
+  <path id="c7" d="M449.178284305241,315.67926949014804 Q300,300 238.98950353863006,437.03181864639015" fill="none" stroke="black" stroke-width="1" />
+  <path id="c8" d="M346.35254915624193,157.34152255572693 Q300,300 225,429.90381056766586" fill="none" stroke="black" stroke-width="1" />
+  <path id="c9" d="M437.0318186463901,361.01049646137005 Q300,300 199.6304090461713,411.4717238216092" fill="none" stroke="black" stroke-width="1" />
+  <path id="c10" d="M170.0961894323342,375 Q300,300 429.9038105676658,375" fill="none" stroke="black" stroke-width="1" />
+  <path id="c11" d="M170.0961894323342,375 Q300,300 300,150" fill="none" stroke="black" stroke-width="1" />
+  <path id="c12" d="M162.96818135360985,361.01049646137 Q300,300 300,450" fill="none" stroke="black" stroke-width="1" />
+  <path id="c13" d="M162.96818135360985,361.01049646137 Q300,300 421.3525491562418,211.83221215612866" fill="none" stroke="black" stroke-width="1" />
+  <path id="c14" d="M157.34152255572695,346.35254915624205 Q300,300 375,170.09618943233409" fill="none" stroke="black" stroke-width="1" />
+  <path id="c15" d="M150.821715694759,284.32073050985184 Q300,300 225,429.90381056766586" fill="none" stroke="black" stroke-width="1" />
+  <path id="c16" d="M150.821715694759,284.32073050985184 Q300,300 346.35254915624193,157.34152255572693" fill="none" stroke="black" stroke-width="1" />
+          
+  <!-- Google hits -->  
+  <a xlink:href="http://www.google.ch" xlink:target="_blank"><text x="450" y="220" style="font-family:Verdana; font-size:24px; font-weight:bold; fill:#4C4C80;">Google</text></a>
+  <a xlink:href="http://de.wikipedia.org/wiki/Rangieren" xlink:target="_blank" xlink:title="http://de.wikipedia.org/wiki/Rangieren"><circle id="pa1" cx="300" cy="150" r="5" stroke="black" fill="#4C4C80" onmouseover="strokeThick('c1'); strokeThick('c10'); strokeThick('c11');" onmouseout="strokeThin('c1'); strokeThin('c10'); strokeThin('c11');" /></a>
+  <text x="300" y="140" style="font-family:Verdana; font-size:12px; font-weight:normal;fill:#000000;">1</text>
+  <a xlink:href="http://www.duden.de/rechtschreibung/rangieren" xlink:target="_blank" xlink:title="http://www.duden.de/rechtschreibung/rangieren"><circle id="pa2" cx="315.67926949014793" cy="150.82171569475898" r="5" stroke="black" fill="#4C4C80"/></a>
+  <a xlink:href="http://synonyme.woxikon.de/synonyme/rangieren.php" xlink:target="_blank" xlink:title="http://synonyme.woxikon.de/synonyme/rangieren.php"><circle id="pa3" cx="331.1867536226638" cy="153.27785988992912" r="5" stroke="black" fill="#4C4C80" onmouseover="strokeThick('c3');" onmouseout="strokeThin('c3');"/></a>
+  <a xlink:href="http://de.thefreedictionary.com/rangieren" xlink:target="_blank" xlink:title="http://de.thefreedictionary.com/rangieren"><circle id="pa4" cx="346.35254915624193" cy="157.34152255572693" r="5" stroke="black" fill="#4C4C80" onmouseover="strokeThick('c8');" onmouseout="strokeThin('c8');"/></a>
+  <a xlink:href="http://de.wiktionary.org/wiki/rangieren" xlink:target="_blank" xlink:title="http://de.wiktionary.org/wiki/rangieren"><circle id="pa5" cx="361.0104964613698" cy="162.9681813536098" r="5" stroke="black" fill="#4C4C80" onmouseover="strokeThick('c2');" onmouseout="strokeThin('c2');"/></a>
+  <a xlink:href="http://en.wiktionary.org/wiki/rangieren" xlink:target="_blank" xlink:title="http://en.wiktionary.org/wiki/rangieren"><circle id="pa6" cx="375" cy="170.09618943233409" r="5" stroke="black" fill="#4C4C80"/></a>
+  <a xlink:href="http://www.youtube.com/watch?v=4iC4vY1EufU" xlink:target="_blank" xlink:title="http://www.youtube.com/watch?v=4iC4vY1EufU"><circle id="pa7" cx="388.1677878438707" cy="178.64745084375772" r="5" stroke="black" fill="#4C4C80"/></a>
+  <a xlink:href="http://www.vida.at/futuretense_cs/GDE/games/schienen/spiel.htm" xlink:target="_blank" xlink:title="http://www.vida.at/futuretense_cs/GDE/games/schienen/spiel.htm"><circle id="pa8" cx="400.3695909538285" cy="188.52827617839063" r="5" stroke="black" fill="#4C4C80" onmouseover="strokeThick('c4');" onmouseout="strokeThin('c4');" /></a>
+  <a xlink:href="http://www.linguee.de/deutsch-englisch/uebersetzung/rangieren.html" xlink:target="_blank" xlink:title="http://www.linguee.de/deutsch-englisch/uebersetzung/rangieren.html"><circle id="pa9" cx="411.47172382160886" cy="199.630409046171" r="5" stroke="black" fill="#4C4C80"/></a>
+  <a xlink:href="http://www.dict.cc/?s=rangieren" xlink:target="_blank" xlink:title="http://www.dict.cc/?s=rangieren"><circle id="pa10" cx="421.3525491562418" cy="211.83221215612866" r="5" stroke="black" fill="#4C4C80" onmouseover="strokeThick('c5'); strokeThick('c12');" onmouseout="strokeThin('c5'); strokeThin('c12');"/></a>
+  <a xlink:href="http://www.dict.cc/deutsch-englisch/Rangieren.html" xlink:target="_blank" xlink:title="http://www.dict.cc/deutsch-englisch/Rangieren.html"><circle id="pa11" cx="429.9038105676656" cy="225" r="5" stroke="black" fill="#4C4C80" onmouseover="strokeThick('c6');" onmouseout="strokeThin('c6');"/></a>
+  <a xlink:href="http://en.bab.la/dictionary/german-english/rangieren" xlink:target="_blank" xlink:title="http://en.bab.la/dictionary/german-english/rangieren"><circle id="pa12" cx="437.0318186463899" cy="238.9895035386295" r="5" stroke="black" fill="#4C4C80"/></a>
+  <a xlink:href="http://www.babla.fr/allemand-francais/rangieren" xlink:target="_blank" xlink:title="http://www.babla.fr/allemand-francais/rangieren"><circle id="pa13" cx="442.6584774442729" cy="253.64745084375735" r="5" stroke="black" fill="#4C4C80"/></a>
+  <a xlink:href="http://www.phoenixcontact.ch/produkte/75235_75255.htm" xlink:target="_blank" xlink:title="http://www.phoenixcontact.ch/produkte/75235_75255.htm"><circle id="pa14" cx="446.7221401100707" cy="268.8132463773355" r="5" stroke="black" fill="#4C4C80"/></a>
+  <a xlink:href="http://www.handelsblatt.com/auto/nachrichten/toyota-mit-neuer-technik-gegen-bedienfehler-beim-rangieren/7400230.html" xlink:target="_blank" xlink:title="http://www.handelsblatt.com/auto/nachrichten/toyota-mit-neuer-technik-gegen-bedienfehler-beim-rangieren/7400230.html"><circle id="pa15" cx="449.17828430524094" cy="284.32073050985133" r="5" stroke="black" fill="#4C4C80"/></a>
+  <a xlink:href="http://www.exportmap.ch/pages_de/laenderrangierung/intro.html" xlink:target="_blank" xlink:title="http://www.exportmap.ch/pages_de/laenderrangierung/intro.html"><circle id="pa16" cx="450" cy="300" r="5" stroke="black" fill="#4C4C80"/></a>
+  <a xlink:href="http://www.duden.de/suchen/dudenonline/rangieren" xlink:target="_blank" xlink:title="http://www.duden.de/suchen/dudenonline/rangieren"><circle id="pa17" cx="449.178284305241" cy="315.67926949014804" r="5" stroke="black" fill="#4C4C80" onmouseover="strokeThick('c7');" onmouseout="strokeThin('c7');"/></a>
+  <a xlink:href="http://ein.anderes-wort.de/fuer/rangieren" xlink:target="_blank" xlink:title="http://ein.anderes-wort.de/fuer/rangieren"><circle id="pa18" cx="446.7221401100709" cy="331.1867536226639" r="5" stroke="black" fill="#4C4C80"/></a>
+  <a xlink:href="http://www.thomas-fur-seine-freunde.de/Spiele/zugspiel-waggons-rangieren.html" xlink:target="_blank" xlink:title="http://www.thomas-fur-seine-freunde.de/Spiele/zugspiel-waggons-rangieren.html"><circle id="pa19" cx="442.658477444273" cy="346.3525491562421" r="5" stroke="black" fill="#4C4C80"/></a>
+  <a xlink:href="http://www.haeseli-schausteller.com/rangieren.html" xlink:target="_blank" xlink:title="http://www.haeseli-schausteller.com/rangieren.html"><circle id="pa20" cx="437.0318186463901" cy="361.01049646137005" r="5" stroke="black" fill="#4C4C80" onmouseover="strokeThick('c9');" onmouseout="strokeThin('c9');"/></a>
+  <text x="445" y="368" style="font-family:Verdana; font-size:12px; font-weight:normal;fill:#000000;">20</text>
+  
+  <!-- Bing hits --> 
+  <a xlink:href="http://www.bing.ch" xlink:target="_blank"><text x="300" y="490" style="font-family:Verdana; font-size:24px; font-weight:bold; text-anchor:middle; fill:#8888FF">Bing</text></a>
+  <a xlink:href="http://de.wikipedia.org/wiki/Rangieren" xlink:target="_blank" xlink:title="http://de.wikipedia.org/wiki/Rangieren"><circle id="pb1" cx="429.9038105676658" cy="375" r="5" stroke="black" fill="#8888FF" onmouseover="strokeThick('c1'); strokeThick('c10'); strokeThick('c11');" onmouseout="strokeThin('c1'); strokeThin('c10'); strokeThin('c11');"/></a>
+  <text x="440" y="385" style="font-family:Verdana; font-size:12px; font-weight:normal;fill:#000000;">1</text>
+  <a xlink:href="http://de.wiktionary.org/wiki/rangieren" xlink:target="_blank" xlink:title="http://de.wiktionary.org/wiki/rangieren"><circle id="pb2" cx="421.3525491562421" cy="388.167787843871" r="5" stroke="black" fill="#8888FF" onmouseover="strokeThick('c2');" onmouseout="strokeThin('c2');"/></a>
+  <a xlink:href="http://www.rangieren.de" xlink:target="_blank" xlink:title="http://www.rangieren.de"><circle id="pb3" cx="411.47172382160915" cy="400.3695909538287" r="5" stroke="black" fill="#8888FF"/></a>
+  <a xlink:href="http://synonyme.woxikon.de/synonyme/rangieren.php" xlink:target="_blank" xlink:title="http://synonyme.woxikon.de/synonyme/rangieren.php"><circle id="pb4" cx="400.3695909538287" cy="411.47172382160915" r="5" stroke="black" fill="#8888FF" onmouseover="strokeThick('c3');" onmouseout="strokeThin('c3');"/></a>
+  <a xlink:href="http://tc-wiki.de/index.php/Rangieren" xlink:target="_blank" xlink:title="http://tc-wiki.de/index.php/Rangieren"><circle id="pb5" cx="388.167787843871" cy="421.3525491562421" r="5" stroke="black" fill="#8888FF"/></a>
+  <a xlink:href="http://www.railsignalling.org/signalwiki/index.php/Rangieren" xlink:target="_blank" xlink:title="http://www.railsignalling.org/signalwiki/index.php/Rangieren"><circle id="pb6" cx="375" cy="429.9038105676658" r="5" stroke="black" fill="#8888FF"/></a>
+  <a xlink:href="http://www.pedal-lady.com/product_info.php?products_id=357" xlink:target="_blank" xlink:title="http://www.pedal-lady.com/product_info.php?products_id=357"><circle id="pb7" cx="361.01049646137005" cy="437.0318186463901" r="5" stroke="black" fill="#8888FF"/></a>
+  <a xlink:href="http://deutsch.wiki-site.com:82/r/a/n/Rangieren.html" xlink:target="_blank" xlink:title="http://deutsch.wiki-site.com:82/r/a/n/Rangieren.html"><circle id="pb8" cx="346.3525491562421" cy="442.658477444273" r="5" stroke="black" fill="#8888FF"/></a>
+  <a xlink:href="http://lexikon.freenet.de/Rangieren" xlink:target="_blank" xlink:title="http://lexikon.freenet.de/Rangieren"><circle id="pb9" cx="331.1867536226639" cy="446.7221401100708" r="5" stroke="black" fill="#8888FF"/></a>
+  <a xlink:href="http://www.vida.at/futuretense_cs/GDE/games/schienen/spiel.htm" xlink:target="_blank" xlink:title="http://www.vida.at/futuretense_cs/GDE/games/schienen/spiel.htm"><circle id="pb10" cx="315.67926949014804" cy="449.178284305241" r="5" stroke="black" fill="#8888FF" onmouseover="strokeThick('c4');" onmouseout="strokeThin('c4');"/></a>
+  <a xlink:href="http://www.dict.cc/?s=rangieren" xlink:target="_blank" xlink:title="http://www.dict.cc/?s=rangieren"><circle id="pb11" cx="300" cy="450" r="5" stroke="black" fill="#8888FF" onmouseover="strokeThick('c5'); strokeThick('c12');" onmouseout="strokeThin('c5'); strokeThin('c12');"/></a>
+  <a xlink:href="http://encyclopedie-de.snyke.com/articles/rangieren.html" xlink:target="_blank" xlink:title="http://encyclopedie-de.snyke.com/articles/rangieren.html"><circle id="pb12" cx="284.320730509852" cy="449.17828430524105" r="5" stroke="black" fill="#8888FF"/></a>
+  <a xlink:href="http://www.wer-weiss-was.de/theme143/article4777558.html" xlink:target="_blank" xlink:title="http://www.wer-weiss-was.de/theme143/article4777558.html"><circle id="pb13" cx="268.81324637733616" cy="446.7221401100709" r="5" stroke="black" fill="#8888FF"/></a>
+  <a xlink:href="http://www.dict.cc/deutsch-englisch/rangieren.html" xlink:target="_blank" xlink:title="http://www.dict.cc/deutsch-englisch/rangieren.html"><circle id="pb14" cx="253.64745084375795" cy="442.6584774442731" r="5" stroke="black" fill="#8888FF" onmouseover="strokeThick('c6');" onmouseout="strokeThin('c6');"/></a>
+  <a xlink:href="http://www.duden.de/suchen/dudenonline/rangieren" xlink:target="_blank" xlink:title="http://www.duden.de/suchen/dudenonline/rangieren"><circle id="pb15" cx="238.98950353863006" cy="437.03181864639015" r="5" stroke="black" fill="#8888FF" onmouseover="strokeThick('c7');" onmouseout="strokeThin('c7');"/></a>
+  <a xlink:href="http://de.thefreedictionary.com/rangieren" xlink:target="_blank" xlink:title="http://de.thefreedictionary.com/rangieren"><circle id="pb16" cx="225" cy="429.90381056766586" r="5" stroke="black" fill="#8888FF" onmouseover="strokeThick('c8');" onmouseout="strokeThin('c8');"/></a>
+  <a xlink:href="http://www.phoenixcontact.com/online/portal/de?urile=wcm:path:/dede/web/offcontext/insite_landing_pages/e67076e8-3e24-47ac-82ec-306fbeac56a4/e67076e8-3e24-47ac-82ec-306fbeac56a4" xlink:target="_blank" xlink:title="http://www.phoenixcontact.com/online/portal/de?urile=wcm:path:/dede/web/offcontext/insite_landing_pages/e67076e8-3e24-47ac-82ec-306fbeac56a4/e67076e8-3e24-47ac-82ec-306fbeac56a4"><circle id="pb17" cx="211.83221215612912" cy="421.35254915624216" r="5" stroke="black" fill="#8888FF"/></a>
+  <a xlink:href="http://haeseli-schausteller.com/rangieren.html" xlink:target="_blank" xlink:title="http://haeseli-schausteller.com/rangieren.html"><circle id="pb18" cx="199.6304090461713" cy="411.4717238216092" r="5" stroke="black" fill="#8888FF" onmouseover="strokeThick('c9');" onmouseout="strokeThin('c9');"/></a>
+  <a xlink:href="http://www.mydict.com/Wort/rangieren/" xlink:target="_blank" xlink:title="http://www.mydict.com/Wort/rangieren/"><circle id="pb19" cx="188.5282761783909" cy="400.3695909538287" r="5" stroke="black" fill="#8888FF"/></a>
+  <a xlink:href="http://www.peter-hug.ch/lexikon/rangieren" xlink:target="_blank" xlink:title="http://www.peter-hug.ch/lexikon/rangieren"><circle id="pb20" cx="178.6474508437579" cy="388.167787843871" r="5" stroke="black" fill="#8888FF"/></a>
+  <text x="154" y="400" style="font-family:Verdana; font-size:12px; font-weight:normal;fill:#000000;">20</text>
+ 
+  <!-- Yandex hits -->
+  <a xlink:href="http://www.yandex.com" xlink:target="_blank"><text x="50" y="220" style="font-family:Verdana; font-size:24px; font-weight:bold; fill:#CCCCFF">Yandex</text></a>
+  <a xlink:href="http://de.wikipedia.org/wiki/Rangieren" xlink:target="_blank" xlink:title="http://de.wikipedia.org/wiki/Rangieren"><circle id="pc1" cx="170.0961894323342" cy="375" r="5" stroke="black" fill="#CCCCFF" onmouseover="strokeThick('c1'); strokeThick('c10'); strokeThick('c11');" onmouseout="strokeThin('c1'); strokeThin('c10'); strokeThin('c11');"/></a>
+  <text x="152" y="382" style="font-family:Verdana; font-size:12px; font-weight:normal;fill:#000000;">1</text>
+  <a xlink:href="http://www.dict.cc/?s=rangieren" xlink:target="_blank" xlink:title="http://www.dict.cc/?s=rangieren"><circle id="pc2" cx="162.96818135360985" cy="361.01049646137" r="5" stroke="black" fill="#CCCCFF" onmouseover="strokeThick('c5'); strokeThick('c12');" onmouseout="strokeThin('c5'); strokeThin('c12');"/></a>
+  <a xlink:href="http://en.wiktionary.org/wiki/rangieren" xlink:target="_blank" xlink:title="http://en.wiktionary.org/wiki/rangieren"><circle id="pc3" cx="157.34152255572695" cy="346.35254915624205" r="5" stroke="black" fill="#CCCCFF"/></a>
+  <a xlink:href="http://dictionary.reverso.net/german-english/rangieren" xlink:target="_blank" xlink:title="http://dictionary.reverso.net/german-english/rangieren"><circle id="pc4" cx="153.27785988992915" cy="331.18675362266384" r="5" stroke="black" fill="#CCCCFF"/></a>
+  <a xlink:href="http://www.proz.com/kudoz/english_to_german/automation_robotics/4539832-backup_maneuver.html" xlink:target="_blank" xlink:title="http://www.proz.com/kudoz/english_to_german/automation_robotics/4539832-backup_maneuver.html"><circle id="pc5" cx="150.82171569475898" cy="315.67926949014793" r="5" stroke="black" fill="#CCCCFF"/></a>
+  <a xlink:href="http://www.babylon.com/definition/Rangieren/" xlink:target="_blank" xlink:title="http://www.babylon.com/definition/Rangieren/"><circle id="pc6" cx="150" cy="300" r="5" stroke="black" fill="#CCCCFF"/></a>
+  <a xlink:href="http://de.thefreedictionary.com/rangieren" xlink:target="_blank" xlink:title="http://de.thefreedictionary.com/rangieren"><circle id="pc7" cx="150.821715694759" cy="284.32073050985184" r="5" stroke="black" fill="#CCCCFF"/></a>
+  <a xlink:href="http://www.youtube.com/watch?v=6nz-n49pIFQ" xlink:target="_blank" xlink:title="http://www.youtube.com/watch?v=6nz-n49pIFQ"><circle id="pc8" cx="153.27785988992918" cy="268.81324637733593" r="5" stroke="black" fill="#CCCCFF"/></a>
+  <a xlink:href="http://verben.woxikon.de/verbformen/rangieren.php" xlink:target="_blank" xlink:title="http://verben.woxikon.de/verbformen/rangieren.php"><circle id="pc9" cx="157.341522555727" cy="253.64745084375772" r="5" stroke="black" fill="#CCCCFF"/></a>
+  <a xlink:href="http://www.flickr.com/photos/motomove/sets/72157617467473410/" xlink:target="_blank" xlink:title="http://www.flickr.com/photos/motomove/sets/72157617467473410/"><circle id="pc10" cx="162.96818135360996" cy="238.98950353862978" r="5" stroke="black" fill="#CCCCFF"/></a>
+  <a xlink:href="http://www.gamezhero.com/search/eisenbahn-rangieren-denkspiel-2" xlink:target="_blank" xlink:title="http://www.gamezhero.com/search/eisenbahn-rangieren-denkspiel-2"><circle id="pc11" cx="170.0961894323343" cy="225" r="5" stroke="black" fill="#CCCCFF"/></a>
+  <a xlink:href="http://vimeo.com/31867155" xlink:target="_blank" xlink:title="http://vimeo.com/31867155"><circle id="pc12" cx="178.64745084375804" cy="211.83221215612883" r="5" stroke="black" fill="#CCCCFF"/></a>
+  <a xlink:href="http://wikipedia.qwika.com/de2en/Rangieren" xlink:target="_blank" xlink:title="http://wikipedia.qwika.com/de2en/Rangieren"><circle id="pc13" cx="188.52827617839105" cy="199.63040904617105" r="5" stroke="black" fill="#CCCCFF"/></a>
+  <a xlink:href="http://www.globalpost.com/dispatch/commerce/091125/obesity-epidemic-fattest-countries?page=0,0" xlink:target="_blank" xlink:title="http://www.globalpost.com/dispatch/commerce/091125/obesity-epidemic-fattest-countries?page=0,0"><circle id="pc14" cx="199.63040904617148" cy="188.52827617839068" r="5" stroke="black" fill="#CCCCFF"/></a>
+  <a xlink:href="http://dictionary.sensagent.com/rangierbahnhof/de-de/" xlink:target="_blank" xlink:title="http://dictionary.sensagent.com/rangierbahnhof/de-de/"><circle id="pc15" cx="211.83221215612923" cy="178.64745084375775" r="5" stroke="black" fill="#CCCCFF"/></a>
+  <a xlink:href="http://www.becker-technik.de" xlink:target="_blank" xlink:title="http://www.becker-technik.de"><circle id="pc16" cx="225" cy="170.0961894323341" r="5" stroke="black" fill="#CCCCFF"/></a>
+  <a xlink:href="http://www.metacafe.com/watch/8145199/abkippen_und_rangieren/" xlink:target="_blank" xlink:title="http://www.metacafe.com/watch/8145199/abkippen_und_rangieren/"><circle id="pc17" cx="238.98950353863012" cy="162.9681813536098" r="5" stroke="black" fill="#CCCCFF"/></a>
+  <a xlink:href="http://www.gartner.com/it/page.jsp?id=2227215" xlink:target="_blank" xlink:title="http://www.gartner.com/it/page.jsp?id=2227215"><circle id="pc18" cx="253.64745084375798" cy="157.34152255572693" r="5" stroke="black" fill="#CCCCFF"/></a>
+  <a xlink:href="http://tr.pons.eu/almanca-ingilizce/menagieren" xlink:target="_blank" xlink:title="http://tr.pons.eu/almanca-ingilizce/menagieren"><circle id="pc19" cx="268.81324637733616" cy="153.27785988992915" r="5" stroke="black" fill="#CCCCFF"/></a>  
+  <a xlink:href="http://www.slideshare.net/napresseportal/insm-und-wiwo-prsentieren-stdteranking-und-cityregionenvergleich-erlangen-wolfsburg-und-jena-aufsteiger-des-jahres" xlink:target="_blank" xlink:title="http://www.slideshare.net/napresseportal/insm-und-wiwo-prsentieren-stdteranking-und-cityregionenvergleich-erlangen-wolfsburg-und-jena-aufsteiger-des-jahres"><circle id="pc20" cx="284.320730509852" cy="150.82171569475898" r="5" stroke="black" fill="#CCCCFF"/></a>
+  <text x="275" y="140" style="font-family:Verdana; font-size:12px; font-weight:normal;fill:#000000;">20</text>
+</svg>
+  </body>
+</html>

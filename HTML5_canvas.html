@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML5 &lt;canvas&gt; Element</title>
+    <link rel="stylesheet" type="text/css" href="HTML5_styles.css">
+  <body>
+    <h1>HTML5</h1>
+    <h2>Das &lt;canvas&gt; Element</h2>
+    <div class="div_description">
+      <p>Auf HTML5 Seiten kann mit einem &lt;canvas&gt;-Element eine Zeichenfläche (canvas, "Leinwand") definiert werden.
+         Das ist ein Bildschirmbereich, in den mit JavaScript grafische Elemente (Linien, Rechtecke, Kreise, usw.) 
+         gezeichnet werden können. Die grafischen Elemente können mit JavaScript auch interaktive Grafiken realisiert werden. 
+	     </p>
+	  <canvas id="leinwand" width="400" height="100"></canvas>
+      <script type="text/javascript">
+	     var c = document.getElementById("leinwand");  // Zeiger auf Canvas
+         var context=c.getContext("2d");
+		 context.moveTo(40,50);
+         context.lineTo(240,50);
+         context.stroke();
+		 context.fillStyle = "yellow";  // Füllfarbe
+		 context.fillRect(120,40,80,60);  // Rechteck zeichnen
+         context.beginPath();
+         context.arc(95,50,40,0,2*Math.PI);
+         context.stroke();
+	  </script>
+    <p>Alle Browser unterstützen das &lt;canvas&gt; Element.</p>
+    </div>
+    <h2>Die Syntax des &lt;canvas&gt; Elements</h2>
+    <div class="div_syntax">
+        <pre>&lt;canvas id="leinwand" width="400" height="100"&gt;&lt;/canvas&gt;
+&lt;script type="text/javascript">
+    var c = document.getElementById("leinwand");  // Zeiger auf Canvas
+    var context=c.getContext("2d");     // Zeichnen in 2D
+    context.moveTo(40,50);              // Zeichenstift positionieren
+    context.lineTo(240,50);             // Linie zeichnen
+    context.stroke();                   // und auf dem Bildschirm anzeigen
+    context.fillStyle = "yellow";       // Füllfarbe
+    context.fillRect(120,40,80,60);     // Rechteck zeichnen
+    context.beginPath();                // Pfad zeichnen
+    context.arc(95,50,40,0,2*Math.PI);  // in diesem Fall einen Kreis
+    context.stroke();                   // und auf dem Bildschirm anzeigen
+&lt;/script&gt;</pre>
+    </div>
+    <h2>Weiterführende Links</h2>
+    <div class="div_links">
+        <p><a target="_blank" href="http://www.w3schools.com/html/html5_canvas.asp">w3schools HTML5 Canvas</a></p>
+        <p><a target="_blank" href="http://www.w3.org/wiki/HTML/Elements/canvas">W3C Wiki HTML/Elements/canvas</a></p>
+    </div>
+    <h2>Die Alternative: Scalable Vector Graphics SVG</h2>
+    <div class="div_description">
+      <p>HTML5 ermöglicht auch das Einbinden von SVG-Grafiken. Die Scalable Vector Graphics sind eine Alternative zu den
+         auf dem &lt;canvas&gt;-Element aufbauenden Grafiken.
+	  </p>
+	  <p>SVG werden wir im Modul "Multimediakommunikation" eingehend behandeln.
+	  </p>
+    </div>
+    <h2>Die Syntax von SVG</h2>
+    <div class="div_syntax">
+      <p>Der folgende SVG-Text beschreibt die gleiche Grafik  wie oben:
+      </p>
+<pre>&lt;svg width="580" height="400" xmlns="http://www.w3.org/2000/svg"&gt;
+    &lt;line x1="40" y1="50" x2="240" y2="50" stroke="black" stroke-width="1"/&gt; 
+    &lt;rect x="120" y="40" width="80" height="60" fill="yellow"/&gt;
+    &lt;circle cx="95" cy="50" r="40" stroke="black" stroke-width="1" fill="none"/&gt;    
+&lt;/svg&gt;</pre>
+    </div>
+  </body>
+</html>

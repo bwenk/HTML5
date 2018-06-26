@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    
+    <h1>60 Punkte auf einem Kreis mit dem Radius 150</h1>
+    
+    <canvas id="myCanvas" width="600" height="600"></canvas>
+    
+      <script type="text/javascript">
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        var alphaMax = 2*Math.PI;
+        var alphaInterval = Math.PI/30;
+        var x = 0.0, y = 0.0;
+        for (var alpha=0.0; alpha<alphaMax;alpha=alpha+alphaInterval) {
+          x = 150*Math.cos(alpha)+300;
+          y = 150*Math.sin(alpha)+300; 
+          ctx.beginPath();
+          ctx.arc(x,y,5,0,2*Math.PI);
+          ctx.stroke();
+        }
+      </script>
+
+  </body>
+</html>
+

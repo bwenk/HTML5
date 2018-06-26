@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <title>Canvas Beispiel 1</title>
+   </head>
+   <body>
+     <canvas id="leinwand" width="600" height="400"></canvas>
+   	 <script>
+       var c = document.getElementById ("leinwand");  // die "Leinwand" im DOM finden
+       var context = c.getContext ("2d");             // den 2D-Kontext definieren
+       context.moveTo (20,20);                        // den "Zeichenstift" setzen
+       context.lineTo (580,20);                       // ein Rechteck zeichnen: oberer Rand
+       context.lineTo (580,380);                      // rechter Rand
+       context.lineTo (20,380);                       // unterer Rand
+       context.lineTo (20,20);                        // linker Rand
+	   context.stroke ();                             // die Zeichnung sichtbar machen
+	   // Sinuskurve zeichnen
+	   var increment = Math.PI / 90;                  // schrittweise Vergrösserung des Winkels
+	   var maxAngle = 6 * Math.PI;                    // bei diesem Winkel endet die Sinuskurve
+	   var angle = 0;                                 // aktueller Winkel
+	   var x = 28;                                    // x-Koordinate des aktuellen Kurvenpunktes
+	   var y;                                         // y-Koordinate des aktuellen Kurvenpunktes
+	   context.moveTo (28, 200);                      // Startpunkt der Sinuskurve
+         while (angle < maxAngle) {
+            y = 200;
+            y = y - 100 * Math.sin(angle);            // berechne y-Wert das aktuellen Kurvenpunktes
+			context.lineTo(x,y);                      // zeichne aktuellen Kurvenabschnitt
+
+			x = x + 1;
+			angle = angle + increment;
+		 }    
+		 context.stroke();
+	 </script>
+   </body>
+</html>

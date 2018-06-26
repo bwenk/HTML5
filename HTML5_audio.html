@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML5 &lt;audio&gt; Element</title>
+    <link rel="stylesheet" type="text/css" href="HTML5_styles.css">
+  </head>
+  <body>
+    <h1>HTML5</h1>
+    <h2>Das &lt;audio&gt; Element</h2>
+    <div class="div_description">
+      <p>Wie für Videos&nbsp; wurde bisher auch für das Abspielen von
+      Audioinhalten auf Webseiten jeweils ein <a target="_blank" href="http://en.wikipedia.org/wiki/Plug-in_%28computing%29">Plug-In</a>
+      (z.B. der Flash-Player) benötigt. Mit dem &lt;audio&gt; Element können
+      Audioinhalte nun in HTML5 direkt im Browser abgespielt werden.</p>
+      <audio controls="controls" preload="none">
+              <source src="Feldlerche.ogg" type="audio/ogg"> <source src="Feldlerche.mp3"
+          type="audio/mpeg">
+      </audio> 
+    <p>Quelle: Feldlerche, Vogelwarte Sempach
+      (http://www.vogelwarte.ch/feldlerche.html)</p>
+    <p>Leider unterstützen die Browser (Apple Safari, Google Chrome, Mozilla
+      Firefox, usw.) unterschiedliche Audio-Formate, weshalb Audioinhalte jeweils
+      in zwei verschiedenen Formaten eingebunden werden müssen:</p>
+    <p class="lightgrey">Das Format <a target="_blank" href="http://www.mp3-geschichte.de/">MP3</a>
+      (MPEG 1 Audio Layer 3) unterstützen
+      Internet Explorer (ab Version 9), Google Chrome (ab Version 6) und Safari
+      (ab Version 5)</p>
+    <p class="lightgrey">Das Format <a target="_blank" href="http://www.vorbis.com/">Ogg</a>
+      (Ogg Vorbis) unterstützen
+      Firefox (ab Version 3.6), Google Chrome (ab Version 6) und Opera (ab
+      Version 10.5).</p>
+    </div>
+        <h2>Die Syntax des &lt;audio&gt; Elements</h2>
+            <div class="div_syntax">
+        <pre>&lt;audio controls="controls" preload="none"&gt;
+   &lt;source src="Feldlerche.ogg" type="audio/ogg"&gt;
+   &lt;source src="Feldlerche.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;</pre>
+    </div>
+            <h2>Weiterführende Links</h2>
+            <div class="div_links">
+            <p><a target="_blank" href="http://www.w3schools.com/html/html5_audio.asp">w3schools HTML5 Audio</a></p>
+            <p><a target="_blank" href="http://www.w3.org/wiki/HTML/Elements/audio">W3C Wiki HTML/Elements/audio</a></p>
+            <p><a target="_blank" href="http://audio.online-convert.com/">Online Audio Conversion</a></p>
+    </div>
+  </body>
+</html>

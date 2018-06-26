@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+function allowDrop(e)
+{
+e.preventDefault();
+}
+
+function drag(e)
+{
+e.dataTransfer.setData("Text",e.target.id);
+}
+
+function drop(e)
+{
+e.preventDefault();
+var data=e.dataTransfer.getData("Text");
+e.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<p>Zu welcher Kategorie gehören die folgenden Tiere? (Bilder entsprechend verschieben!)</p>
+<h4>Insekt(en)</h4>
+<div id="div1" style="width:480px;height:100px;padding:10px;border:1px solid #aaaaaa;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<h4>Kein(e) Insekt(en)</h4>
+<div id="div2" style="width:480px;height:100px;padding:10px;border:1px solid #aaaaaa;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="Fliege1.jpg" draggable="true" ondragstart="drag(event)" />
+<img id="drag2" src="Biene1.jpg" draggable="true" ondragstart="drag(event)" />
+<img id="drag3" src="Spinne1.jpg" draggable="true" ondragstart="drag(event)" />
+<img id="drag4" src="Kaefer1.jpg" draggable="true" ondragstart="drag(event)" />
+
+    
+
+    
+  </body>
+</html>

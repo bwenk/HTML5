@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML5 Local Storage</title>
+    <link rel="stylesheet" type="text/css" href="HTML5_styles.css">
+    <script type="text/javascript">
+        function getPreferredLanguage() {  // Abfrage der bevorzugten Sprache der BenutzerIn
+        	var infoBlock = document.getElementById("infoblock");
+ 			var language = localStorage.getItem('preferredLanguage');
+ 			localStorage.setItem('preferredLanguage', "undefined");
+ 			switch(language) {
+               case "Deutsch": alert("Gemäss den Angaben vom letzten Mal ist Deutsch Ihre bevorzugte Sprache.");
+                               break;
+               case "Französisch": alert("<b>Gemäss den Angaben vom letzten Mal ist Französisch Ihre bevorzugte Sprache.</b>");
+                               break;
+               case "Italienisch": alert("<b>Gemäss den Angaben vom letzten Mal ist Italienisch Ihre bevorzugte Sprache.</b>");
+                               break;
+               case "Englisch": alert("According to your input last time, English is your preferred language.");
+                               break;
+               default:	infoBlock.innerHTML = "<b>Wählen Sie Ihre bevorzugte Sprache: </b><input type='radio' onclick='prefLangDeutsch()'>Deutsch <input type='radio' onclick='prefLangFranz()'>Français <input type='radio' onclick='prefLangItal()'>Italiano <input type='radio' onclick='prefLangEngl()'>English";
+			}
+        }
+        function prefLangDeutsch() {  // bevorzugte Sprache = Deutsch
+         	localStorage.setItem('preferredLanguage', "Deutsch");
+         	var infoBlock = document.getElementById("infoblock");
+         	infoBlock.innerHTML = "<b>Danke! Bitte aktualisieren Sie nun diese Seite.</b>";
+        }
+        function prefLangFranz() {  // bevorzugte Sprache = Französisch
+         	localStorage.setItem('preferredLanguage', "Französisch");
+         	var infoBlock = document.getElementById("infoblock");
+         	infoBlock.innerHTML = "<b>Merci! Rafraichissez cette page s'il vous plaît.</b>";
+        }
+        function prefLangItal() {  // bevorzugte Sprache = Italienisch
+         	localStorage.setItem('preferredLanguage', "Italienisch");
+         	var infoBlock = document.getElementById("infoblock");
+         	infoBlock.innerHTML = "<b>Grazie! Aggiornate questa pagina per piacere.</b>";
+        }
+        function prefLangEngl() {  // bevorzugte Sprache = Englisch
+         	localStorage.setItem('preferredLanguage', "Englisch");
+         	var infoBlock = document.getElementById("infoblock");
+         	infoBlock.innerHTML = "<b>Thank you! Please refresh this page now.</b>";
+        }
+    </script>
+  <head>
+  <body onload="getPreferredLanguage()">
+    <h1>HTML5</h1>
+    <h2>Local Storage</h2>
+	<div class="div_description">
+      <p>Eine HTML5-Webseite kann lokal auf dem Rechner der BesucherIn Daten (Schlüssel/Werte-Paare)
+         speichern. Diese Daten können laufend aktualisiert werden und stehen bei jedem Aufruf der Seite wieder zur
+         Verfügung (<em>localStorage</em>) oder nur bis zum Schliessen der Seite (<em>sessionStorage</em>). Die Daten sind aber an die
+         betreffende Webseite gebunden, andere Webseiten können nicht auf sie
+         zugreifen (auch nicht lesend).
+      </p>
+      <p id="infoblock"></p>
+    </div>
+    <h2>JavaScript Beispiel</h2>
+    <div class="div_syntax">
+      <pre>var language = localStorage.getItem ('preferredLanguage');  // Wert des Schlüssels "preferredLanguage" abfragen
+localStorage.setItem ('preferredLanguage', "Französisch");  // Wert des Schlüssels "preferredLanguage" auf "Französisch" setzen
+</pre>
+    </div>
+            <h2>Weiterführende Links</h2>
+            <div class="div_links">
+            <p><a target="_blank" href="http://www.w3schools.com/html/html5_webstorage.asp">w3schools HTML5 Web Storage</a></p>
+            <p><a target="_blank" href="http://www.html5rocks.com/en/features/storage">HTML5rocks HTML5 Features - Storage</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS3 Animations</title>
+    <style>
+	  /* Firefox, Opera, Internet Explorer 10 */
+	  @keyframes fade_in {  
+        from { opacity: 0.0; }
+        to { opacity: 1.0; }
+      }
+      /* Chrome, Safari */
+      @-webkit-keyframes fade_in {  
+        from { opacity: 0.0; }
+        to { opacity: 1.0; }
+	  }
+	  /* Firefox, Opera, Internet Explorer 10 */
+	  @keyframes move_and_fade_in {  
+        from { opacity: 1.0; top: 600px; }
+        to { opacity: 0.0; top: 200px;}
+      }
+      /* Chrome, Safari */
+      @-webkit-keyframes move_and_fade_in {  
+        from { opacity: 1.0; top: 600px;}
+        to { opacity: 0.0; top: 200px;}
+      }
+	  #testbox {
+	    display: block;
+		position: fixed;
+		top: 100px; left: 100px;
+		font-family: Verdana; font-size: 24pt; text-align: center;
+		width: 400px;
+		margin: 10px;
+		padding: 20px;
+		border: 1px solid #333333;
+		background: #eeeeee;
+        /* Firefox, Opera, Internet Explorer 10 */
+        animation-name: fade_in;  
+        animation-iteration-count: 1;  
+        animation-timing-function: ease-in;
+        animation-duration: 4s;
+        /* Chrome, Safari */
+        -webkit-animation-name: fade_in;  
+        -webkit-animation-iteration-count: 1;  
+        -webkit-animation-timing-function: ease-in;
+        -webkit-animation-duration: 4s;
+	  }
+	  #testbox2 {
+	    display: block;
+		position: fixed;
+		top: 600px; left: 100px;
+		font-family: Verdana; font-size: 11pt; text-align: left;
+		width: 400px;
+		margin: 10px;
+		padding: 20px;
+		border: 1px solid #000000;
+		background: #eeeeee;
+        /* Firefox, Opera, Internet Explorer 10 */
+        animation-name: move_and_fade_in;  
+        animation-iteration-count: 1;  
+        animation-timing-function: linear;
+		animation-delay: 2s;
+        animation-duration: 4s;
+		animation-fill-mode: both;
+        /* Chrome, Safari */
+        -webkit-animation-name: move_and_fade_in;  
+        -webkit-animation-iteration-count: 1;  
+        -webkit-animation-timing-function: linear;
+		-webkit-animation-delay: 2s;
+        -webkit-animation-duration: 4s;
+		-webkit-animation-fill-mode: both;
+	  }
+	</style>
+  </head>
+  <body>
+    <h1 id="testbox">Was passiert jetzt mit diesem Titel?</h1>
+	<h2 id="testbox2">Noch ein zweiter Titel!</h2>
+  </body>
+</html>
